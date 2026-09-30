@@ -1,7 +1,10 @@
+import numpy as np
+
 # reusable utility functions
 
 # rot_z(theta)
 
+# normalize(v)
 
 # translate(d)
 
