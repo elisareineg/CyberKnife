@@ -3,8 +3,18 @@ import numpy as np
 # reusable utility functions
 
 # rot_z(theta)
+def rot_z(deg):
+    # 4x4 rotation about z 
+    a = np.radians(deg)
+    c, s = np.cos(a), np.sin(a)
+    return np.array([[c, -s, 0, 0],
+                     [s,  c, 0, 0],
+                     [0,  0, 1, 0],
+                     [0,  0, 0, 1]], dtype=float)
 
 # normalize(v)
+def normalize(v):
+    pass
 
 # translate(d)
 
