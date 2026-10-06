@@ -17,11 +17,36 @@ def normalize(v):
     pass
 
 # translate(d)
+def translate(d):
+    # Return a 4x4 homogeneous translation matrix
+    dx, dy, dz = d
 
+    return np.array([
+        [1.0, 0.0, 0.0, dx],
+        [0.0, 1.0, 0.0, dy],
+        [0.0, 0.0, 1.0, dz],
+        [0.0, 0.0, 0.0, 1.0]
+    ])
 
 # frame_to_home(O, e1, e2, e3)
+def frame_to_home(O, e1, e2, e3):
+    # Build frame transform using axis directions as columns and origin as translation
+    F = np.eye(4)
+
+    F[:3, 0] = e1
+    F[:3, 1] = e2
+    F[:3, 2] = e3
+    F[:3, 3] = O
+
+    return F
 
 # apply(F, p)
+def apply(F, p):
+    # Apply a 4x4 homogeneous transformation to a 3D point
+    p_h = np.append(p, 1.0)
+    result_h = F @ p_h
+
+    return result_h[:3]
 
 # line_from_points(A, B)
 
