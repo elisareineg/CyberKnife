@@ -14,7 +14,19 @@ def rot_z(deg):
 
 # normalize(v)
 def normalize(v):
-    pass
+    # Return v scaled to unit length
+    v = np.asarray(v, dtype=float)
+    length = np.linalg.norm(v)
+
+    if np.isclose(length, 0.0):
+        raise ValueError("Cannot normalize a zero-length vector.")
+
+    return v / length
+
+# scale(s)
+def scale(s):
+    # Return a 4x4 homogeneous scaling matrix (uniform scale s on x, y, z)
+    return np.diag([s, s, s, 1.0]).astype(float)
 
 # translate(d)
 def translate(d):
