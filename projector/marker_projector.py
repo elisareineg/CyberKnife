@@ -1,8 +1,7 @@
 import numpy as np
 
-from forward_projector import (
-    DETECTOR_A,
-    DETECTOR_B,
+from geometry import DETECTOR_A, DETECTOR_B
+from projector.forward_projector import (
     project_point_to_detector,
     detector_to_image
 )
