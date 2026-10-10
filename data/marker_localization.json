@@ -1,0 +1,126 @@
+{
+    "A": {
+        "M1": {
+            "true": [
+                122.25628272601779,
+                112.66546331558988
+            ],
+            "segmented": [
+                122.18035902603769,
+                112.57874866039897
+            ],
+            "segmented_true_error_px": 0.11525554061972312,
+            "segmented_true_error_mm": 0.11525554061972312,
+            "manual": [
+                121.90259740259738,
+                111.512987012987
+            ],
+            "manual_true_error_px": 1.20552682925939,
+            "manual_true_error_mm": 1.20552682925939,
+            "manual_segmented_error_px": 1.1013625236726028,
+            "manual_segmented_error_mm": 1.1013625236726028
+        },
+        "M2": {
+            "true": [
+                103.41962381519664,
+                178.49038851363628
+            ],
+            "segmented": [
+                103.44460287946215,
+                178.4251796954796
+            ],
+            "segmented_true_error_px": 0.06982938934982243,
+            "segmented_true_error_mm": 0.06982938934982243,
+            "manual": [
+                104.37012987012987,
+                178.07142857142856
+            ],
+            "manual_true_error_px": 1.0387440462594364,
+            "manual_true_error_mm": 1.0387440462594364,
+            "manual_segmented_error_px": 0.990827971053418,
+            "manual_segmented_error_mm": 0.990827971053418
+        },
+        "M3": {
+            "true": [
+                87.09655421114041,
+                172.58800522818615
+            ],
+            "segmented": [
+                87.23960159393542,
+                172.5337267805129
+            ],
+            "segmented_true_error_px": 0.15299903139013213,
+            "segmented_true_error_mm": 0.15299903139013213,
+            "manual": [
+                88.13636363636363,
+                172.22727272727272
+            ],
+            "manual_true_error_px": 1.1006050962985232,
+            "manual_true_error_mm": 1.1006050962985232,
+            "manual_segmented_error_px": 0.9476794012150634,
+            "manual_segmented_error_mm": 0.9476794012150634
+        }
+    },
+    "B": {
+        "M1": {
+            "true": [
+                121.64090384928083,
+                32.60625337172614
+            ],
+            "segmented": [
+                121.53517756361616,
+                32.581623284886646
+            ],
+            "segmented_true_error_px": 0.10855730587191752,
+            "segmented_true_error_mm": 0.10855730587191752,
+            "manual": [
+                121.25324675324673,
+                31.967532467532465
+            ],
+            "manual_true_error_px": 0.7471562203178003,
+            "manual_true_error_mm": 0.7471562203178003,
+            "manual_segmented_error_px": 0.6757162968245557,
+            "manual_segmented_error_mm": 0.6757162968245557
+        },
+        "M2": {
+            "true": [
+                103.66799124789273,
+                142.23461569201137
+            ],
+            "segmented": [
+                103.61912849804955,
+                142.19601011266457
+            ],
+            "segmented_true_error_px": 0.06227326134818968,
+            "segmented_true_error_mm": 0.06227326134818968,
+            "manual": [
+                104.04545454545455,
+                142.35714285714283
+            ],
+            "manual_true_error_px": 0.3968519210000034,
+            "manual_true_error_mm": 0.3968519210000034,
+            "manual_segmented_error_px": 0.4557605292684605,
+            "manual_segmented_error_mm": 0.4557605292684605
+        },
+        "M3": {
+            "true": [
+                87.06018616399307,
+                32.06187847893631
+            ],
+            "segmented": [
+                87.06128133910957,
+                32.10071046213446
+            ],
+            "segmented_true_error_px": 0.03884742369369239,
+            "segmented_true_error_mm": 0.03884742369369239,
+            "manual": [
+                86.512987012987,
+                31.967532467532465
+            ],
+            "manual_true_error_px": 0.5552729785696192,
+            "manual_true_error_mm": 0.5552729785696192,
+            "manual_segmented_error_px": 0.5642366935111672,
+            "manual_segmented_error_mm": 0.5642366935111672
+        }
+    }
+}

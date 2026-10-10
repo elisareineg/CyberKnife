@@ -1,0 +1,588 @@
+{
+    "maximum_acceptable_MRE_mm": 5.0,
+    "directions_per_detector": 360,
+    "direction_combinations_per_marker_per_MLE": 129600,
+    "tested_MLE_values_mm": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ],
+    "maxMLE_mm": 7,
+    "MLE_summary": [
+        {
+            "MLE_mm": 0,
+            "mean_MRE_mm": 1.3496778652989687e-13,
+            "worst_MRE_mm": 2.343731030072664e-13,
+            "mean_REM_mm": 2.2737897570262995e-13,
+            "worst_marker": "M2",
+            "worst_angle_A_deg": 0,
+            "worst_angle_B_deg": 0,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 1,
+            "mean_MRE_mm": 0.5341259353955418,
+            "worst_MRE_mm": 0.707949093249588,
+            "mean_REM_mm": 0.397016447722862,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 2,
+            "mean_MRE_mm": 1.0682517127520206,
+            "worst_MRE_mm": 1.4158987558237865,
+            "mean_REM_mm": 0.7940326694354857,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 3,
+            "mean_MRE_mm": 1.6023771740262367,
+            "worst_MRE_mm": 2.1238484200789665,
+            "mean_REM_mm": 1.1910484455706758,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 4,
+            "mean_MRE_mm": 2.13650216116742,
+            "worst_MRE_mm": 2.83179751836966,
+            "mean_REM_mm": 1.5880635555358584,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 5,
+            "mean_MRE_mm": 2.670626516115316,
+            "worst_MRE_mm": 3.5397454830525485,
+            "mean_REM_mm": 1.9850777471079768,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 6,
+            "mean_MRE_mm": 3.2047500808002916,
+            "worst_MRE_mm": 4.2476917464866455,
+            "mean_REM_mm": 2.382090765456178,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 7,
+            "mean_MRE_mm": 3.73887269714593,
+            "worst_MRE_mm": 4.9556357410382486,
+            "mean_REM_mm": 2.7791023804128994,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": true
+        },
+        {
+            "MLE_mm": 8,
+            "mean_MRE_mm": 4.272994207074658,
+            "worst_MRE_mm": 5.663576899081016,
+            "mean_REM_mm": 3.1761123737491195,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": false
+        },
+        {
+            "MLE_mm": 9,
+            "mean_MRE_mm": 4.807114452516713,
+            "worst_MRE_mm": 6.371514652999775,
+            "mean_REM_mm": 3.5731204529825136,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": false
+        },
+        {
+            "MLE_mm": 10,
+            "mean_MRE_mm": 5.3412332754235665,
+            "worst_MRE_mm": 7.079448435190714,
+            "mean_REM_mm": 3.97012640187414,
+            "worst_marker": "M3",
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270,
+            "guaranteed_below_5_mm": false
+        }
+    ],
+    "marker_summary": [
+        {
+            "MLE_mm": 0,
+            "marker": "M1",
+            "minimum_MRE_mm": 5.684341886080802e-14,
+            "mean_MRE_mm": 5.684341886080802e-14,
+            "maximum_MRE_mm": 5.684341886080802e-14,
+            "minimum_REM_mm": 1.1370071466249427e-13,
+            "mean_REM_mm": 1.1370071466249427e-13,
+            "maximum_REM_mm": 1.1370071466249427e-13,
+            "worst_angle_A_deg": 0,
+            "worst_angle_B_deg": 0
+        },
+        {
+            "MLE_mm": 0,
+            "marker": "M2",
+            "minimum_MRE_mm": 2.343731030072664e-13,
+            "mean_MRE_mm": 2.343731030072665e-13,
+            "maximum_MRE_mm": 2.343731030072664e-13,
+            "minimum_REM_mm": 3.4106080228530487e-13,
+            "mean_REM_mm": 3.4106080228530497e-13,
+            "maximum_REM_mm": 3.4106080228530487e-13,
+            "worst_angle_A_deg": 0,
+            "worst_angle_B_deg": 0
+        },
+        {
+            "MLE_mm": 0,
+            "marker": "M3",
+            "minimum_MRE_mm": 1.1368683772161603e-13,
+            "mean_MRE_mm": 1.1368683772161603e-13,
+            "maximum_MRE_mm": 1.1368683772161603e-13,
+            "minimum_REM_mm": 2.2737541016009064e-13,
+            "mean_REM_mm": 2.2737541016009064e-13,
+            "maximum_REM_mm": 2.2737541016009064e-13,
+            "worst_angle_A_deg": 0,
+            "worst_angle_B_deg": 0
+        },
+        {
+            "MLE_mm": 1,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.007862969579104234,
+            "mean_MRE_mm": 0.5347960085340324,
+            "maximum_MRE_mm": 0.7071994444508508,
+            "minimum_REM_mm": 6.4687563994459355e-06,
+            "mean_REM_mm": 0.39742755906340915,
+            "maximum_REM_mm": 0.9801189314839952,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 1,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.015273313724671715,
+            "mean_MRE_mm": 0.5400905649236881,
+            "maximum_MRE_mm": 0.7064951596230216,
+            "minimum_REM_mm": 3.6227211600174334e-06,
+            "mean_REM_mm": 0.40209874666000045,
+            "maximum_REM_mm": 0.990096201629877,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 1,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.004778287005365102,
+            "mean_MRE_mm": 0.5274912327289049,
+            "maximum_MRE_mm": 0.707949093249588,
+            "minimum_REM_mm": 1.1879251153746728e-06,
+            "mean_REM_mm": 0.3915230374451764,
+            "maximum_REM_mm": 0.9660186323532824,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 2,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.0157600199525162,
+            "mean_MRE_mm": 1.0695918585909683,
+            "maximum_MRE_mm": 1.4144085767155585,
+            "minimum_REM_mm": 2.1709435705298003e-08,
+            "mean_REM_mm": 0.7948548857656529,
+            "maximum_REM_mm": 1.9602366085925902,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 2,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.03056349627102751,
+            "mean_MRE_mm": 1.0801809691461763,
+            "maximum_MRE_mm": 1.4130120323680266,
+            "minimum_REM_mm": 9.910925517403224e-06,
+            "mean_REM_mm": 0.8041972576278129,
+            "maximum_REM_mm": 1.9801910688643478,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 2,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.00961323281795714,
+            "mean_MRE_mm": 1.054982310518917,
+            "maximum_MRE_mm": 1.4158987558237865,
+            "minimum_REM_mm": 6.139887306606795e-06,
+            "mean_REM_mm": 0.7830458649129912,
+            "maximum_REM_mm": 1.932035930070075,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 3,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.023731475841436055,
+            "mean_MRE_mm": 1.6043873916946654,
+            "maximum_MRE_mm": 2.121626846047841,
+            "minimum_REM_mm": 2.0971932606028364e-06,
+            "mean_REM_mm": 1.192281770130499,
+            "maximum_REM_mm": 2.9403516189104235,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 3,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.045893280086095466,
+            "mean_MRE_mm": 1.6202710519669972,
+            "maximum_MRE_mm": 2.119550080780852,
+            "minimum_REM_mm": 4.252058073432601e-06,
+            "mean_REM_mm": 1.206295299908125,
+            "maximum_REM_mm": 2.9702831444685875,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 3,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.014562916652198048,
+            "mean_MRE_mm": 1.5824730784170475,
+            "maximum_MRE_mm": 2.1238484200789665,
+            "minimum_REM_mm": 2.1109184438414493e-05,
+            "mean_REM_mm": 1.1745682666734034,
+            "maximum_REM_mm": 2.8980505409368957,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 4,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.0318170424262893,
+            "mean_MRE_mm": 2.1391824493708667,
+            "maximum_MRE_mm": 2.8288537016580184,
+            "minimum_REM_mm": 8.983948576796613e-06,
+            "mean_REM_mm": 1.5897079837075951,
+            "maximum_REM_mm": 3.9204625500425054,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 4,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.06128530176562191,
+            "mean_MRE_mm": 2.1603606526868218,
+            "maximum_MRE_mm": 2.826108767309495,
+            "minimum_REM_mm": 1.126621818411558e-05,
+            "mean_REM_mm": 1.6083926792875305,
+            "maximum_REM_mm": 3.9603709712281314,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 4,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.019235771006927714,
+            "mean_MRE_mm": 2.1099633814445706,
+            "maximum_MRE_mm": 2.83179751836966,
+            "minimum_REM_mm": 3.6406437233935056e-05,
+            "mean_REM_mm": 1.5660900036124497,
+            "maximum_REM_mm": 3.8640611127590376,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 5,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.04005548837419528,
+            "mean_MRE_mm": 2.6739768731484372,
+            "maximum_MRE_mm": 3.5360885927154784,
+            "minimum_REM_mm": 1.673630489231366e-05,
+            "mean_REM_mm": 1.987133282255335,
+            "maximum_REM_mm": 4.900567989624382,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 5,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.07676204648102264,
+            "mean_MRE_mm": 2.700449610608275,
+            "maximum_MRE_mm": 3.532687554307596,
+            "minimum_REM_mm": 1.2046160094946283e-05,
+            "mean_REM_mm": 2.010489135623807,
+            "maximum_REM_mm": 4.950453091959603,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 5,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.02260464812892943,
+            "mean_MRE_mm": 2.6374530645892365,
+            "maximum_MRE_mm": 3.5397454830525485,
+            "minimum_REM_mm": 2.198243093533134e-05,
+            "mean_REM_mm": 1.957610823444788,
+            "maximum_REM_mm": 4.830071415344874,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 6,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.048124770966597265,
+            "mean_MRE_mm": 3.208770504560756,
+            "maximum_MRE_mm": 4.243330968350752,
+            "minimum_REM_mm": 1.0621917897335665e-05,
+            "mean_REM_mm": 2.3845574441432107,
+            "maximum_REM_mm": 5.880675327524311,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 6,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.09234579394685796,
+            "mean_MRE_mm": 3.2405377650364717,
+            "maximum_MRE_mm": 4.239285904035016,
+            "minimum_REM_mm": 5.575813796443231e-05,
+            "mean_REM_mm": 2.4125843896828583,
+            "maximum_REM_mm": 5.940528049521433,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 6,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.025413957533417422,
+            "mean_MRE_mm": 3.1649419728036463,
+            "maximum_MRE_mm": 4.2476917464866455,
+            "minimum_REM_mm": 1.1196140649799778e-05,
+            "mean_REM_mm": 2.3491304625424636,
+            "maximum_REM_mm": 5.796095236537166,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 7,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.05510959490456296,
+            "mean_MRE_mm": 3.743563185147316,
+            "maximum_MRE_mm": 4.950580277656557,
+            "minimum_REM_mm": 2.977372991750661e-05,
+            "mean_REM_mm": 2.781980200220802,
+            "maximum_REM_mm": 6.86079555878193,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 7,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.10805856645658327,
+            "mean_MRE_mm": 3.7806249552796403,
+            "maximum_MRE_mm": 4.945903278659114,
+            "minimum_REM_mm": 2.2696546049087843e-06,
+            "mean_REM_mm": 2.8146782894891444,
+            "maximum_REM_mm": 6.930594386824584,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 7,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.02767610080418291,
+            "mean_MRE_mm": 3.6924299510108343,
+            "maximum_MRE_mm": 4.9556357410382486,
+            "minimum_REM_mm": 1.718060645305654e-05,
+            "mean_REM_mm": 2.7406486515287516,
+            "maximum_REM_mm": 6.762119081984894,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 8,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.06188600843125327,
+            "mean_MRE_mm": 4.278354756455564,
+            "maximum_MRE_mm": 5.657835969691101,
+            "minimum_REM_mm": 1.0101786065349163e-05,
+            "mean_REM_mm": 3.1794014068863827,
+            "maximum_REM_mm": 7.840914216966855,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 8,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.12392207947151067,
+            "mean_MRE_mm": 4.320711020649848,
+            "maximum_MRE_mm": 5.652539140259085,
+            "minimum_REM_mm": 7.158210548883909e-05,
+            "mean_REM_mm": 3.2167705987581936,
+            "maximum_REM_mm": 7.920650646843275,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 8,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.02940725940297583,
+            "mean_MRE_mm": 4.219916844118561,
+            "maximum_MRE_mm": 5.663576899081016,
+            "minimum_REM_mm": 1.566628226356715e-06,
+            "mean_REM_mm": 3.132165115602783,
+            "maximum_REM_mm": 7.7281415994558,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 9,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.0684921860869495,
+            "mean_MRE_mm": 4.8131450600426735,
+            "maximum_MRE_mm": 6.365097493480219,
+            "minimum_REM_mm": 6.313785142377901e-06,
+            "mean_REM_mm": 3.5768207638329725,
+            "maximum_REM_mm": 8.82102994802626,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 9,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.13995769519311876,
+            "mean_MRE_mm": 4.860795800463531,
+            "maximum_MRE_mm": 6.3591929508262925,
+            "minimum_REM_mm": 3.5366212551612846e-05,
+            "mean_REM_mm": 3.6188609949218904,
+            "maximum_REM_mm": 8.910695372625693,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 9,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.030628209211558104,
+            "mean_MRE_mm": 4.747402497043936,
+            "maximum_MRE_mm": 6.371514652999775,
+            "minimum_REM_mm": 1.3067464940777829e-05,
+            "mean_REM_mm": 3.523679600192678,
+            "maximum_REM_mm": 8.694161436715438,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 10,
+            "marker": "M1",
+            "minimum_MRE_mm": 0.07496855189433181,
+            "mean_MRE_mm": 5.347933937477318,
+            "maximum_MRE_mm": 7.072364298018875,
+            "minimum_REM_mm": 3.505995699795888e-05,
+            "mean_REM_mm": 3.9742381061910295,
+            "maximum_REM_mm": 9.801141946603794,
+            "worst_angle_A_deg": 91,
+            "worst_angle_B_deg": 89
+        },
+        {
+            "MLE_mm": 10,
+            "marker": "M2",
+            "minimum_MRE_mm": 0.1561863794883807,
+            "mean_MRE_mm": 5.400879134042194,
+            "maximum_MRE_mm": 7.065864172267495,
+            "minimum_REM_mm": 3.3569580779628284e-05,
+            "mean_REM_mm": 4.020949278587726,
+            "maximum_REM_mm": 9.900727107304721,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        },
+        {
+            "MLE_mm": 10,
+            "marker": "M3",
+            "minimum_MRE_mm": 0.031356310917228535,
+            "mean_MRE_mm": 5.274886754751187,
+            "maximum_MRE_mm": 7.079448435190714,
+            "minimum_REM_mm": 7.98279471394846e-05,
+            "mean_REM_mm": 3.9151918208436642,
+            "maximum_REM_mm": 9.660177302093041,
+            "worst_angle_A_deg": 270,
+            "worst_angle_B_deg": 270
+        }
+    ],
+    "REM_analysis": {
+        "dangerous_cases_found": true,
+        "correlation_MRE_REM": 0.3099829909658123,
+        "minimum_REM_dangerous_mm": 1.566628270666115e-06,
+        "maximum_REM_dangerous_mm": 6.990227699279785,
+        "minimum_REM_safe_mm": 1.1370071550942384e-13,
+        "maximum_REM_safe_mm": 9.900727272033691,
+        "perfect_REM_threshold_exists": false,
+        "threshold_tests": [
+            {
+                "REM_threshold_mm": 0.01,
+                "dangerous_cases_missed": 1750,
+                "dangerous_fraction_missed": 0.00302164881879431,
+                "safe_cases_flagged": 3281114
+            },
+            {
+                "REM_threshold_mm": 0.1,
+                "dangerous_cases_missed": 14635,
+                "dangerous_fraction_missed": 0.02526961740745985,
+                "safe_cases_flagged": 3074089
+            },
+            {
+                "REM_threshold_mm": 0.5,
+                "dangerous_cases_missed": 72981,
+                "dangerous_fraction_missed": 0.12601311568253004,
+                "safe_cases_flagged": 2443885
+            },
+            {
+                "REM_threshold_mm": 1.0,
+                "dangerous_cases_missed": 141667,
+                "dangerous_fraction_missed": 0.2446102418355049,
+                "safe_cases_flagged": 1890476
+            },
+            {
+                "REM_threshold_mm": 2.0,
+                "dangerous_cases_missed": 267417,
+                "dangerous_fraction_missed": 0.46173729267172464,
+                "safe_cases_flagged": 1262734
+            },
+            {
+                "REM_threshold_mm": 3.0,
+                "dangerous_cases_missed": 378018,
+                "dangerous_fraction_missed": 0.652707224675993,
+                "safe_cases_flagged": 876255
+            },
+            {
+                "REM_threshold_mm": 4.0,
+                "dangerous_cases_missed": 463702,
+                "dangerous_fraction_missed": 0.8006540574700339,
+                "safe_cases_flagged": 610005
+            },
+            {
+                "REM_threshold_mm": 5.0,
+                "dangerous_cases_missed": 525261,
+                "dangerous_fraction_missed": 0.9069453029764104,
+                "safe_cases_flagged": 416759
+            }
+        ]
+    }
+}

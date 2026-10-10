@@ -71,3 +71,5 @@ def apply(F, p):
 # symbolic_intersection(P1, v1, P2, v2)
 
 # attenuate(I0, k, lengths, densities)
+
+# author: akshay, elisa
