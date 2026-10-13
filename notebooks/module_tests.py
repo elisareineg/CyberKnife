@@ -1111,17 +1111,17 @@ plt.show()
 # projections, the segmented error ranged from 0.04 mm to 0.15 mm.
 # The average segmented error was about 0.09 mm.
 # The manually selected locations were also close, but the differences
-# were noticeably larger. The visual errors ranged from 0.42 mm to
-# 1.46 mm and averaged about 0.90 mm.
+# were noticeably larger. The visual errors ranged from 0.40 mm to
+# 1.21 mm and averaged about 0.84 mm.
 # This difference is reasonable. The automatic method uses the
 # intensity values from several pixels in the whole dark marker region
 # to estimate its centre. When selecting the marker manually, I had
 # to judge the centre by eye and place the mouse cursor there. Since
 # the image resolution is 1 mm per pixel, being off by about one pixel
 # already gives approximately 1 mm of localization error.
-# M2 was particularly easy to select visually in Detector A, where
-# the visual error was only 0.42 mm. M3 in Detector A had the largest
-# visual error at 1.46 mm. This does not mean the physical marker
+# M2 was particularly easy to select visually in Detector B, where
+# the visual error was only 0.40 mm. M1 in Detector A had the largest
+# visual error at 1.21 mm. This does not mean the physical marker
 # moved. It mainly shows that manually choosing the exact centre of a
 # small projected marker is less repeatable than calculating its centre
 # from the image intensities.

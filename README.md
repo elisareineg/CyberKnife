@@ -136,6 +136,45 @@ notebooks/module_tests.ipynb
 
 The notebook includes the predictions, tests, numerical results, figures, and findings for Parts 1 through 10.
 
+The notebook is saved with all of its outputs, so it can be read directly on GitHub without running anything. The main results are also summarised below, in case the notebook does not open.
+
+### If running the code fails
+
+- Install the dependencies first with `pip install -r requirements.txt`. `drr.py` needs `trimesh`.
+- The DRR arrays (`data/*_drr_*.npy`) are not stored in the repository (they are excluded by `.gitignore`). Run `python drr.py` once to create them before running `localize.py`, Part 6 of the demo, or Parts 5–6 of the notebook.
+- Run `localize.py` with `--manual` (or through the demo). Running it without `--manual` overwrites the saved manual localization results.
+
+## Results summary
+
+The same results as in `notebooks/module_tests.ipynb`, in condensed form.
+
+| Part | What was tested | Result |
+|---|---|---|
+| 1. Frame transforms | MD ↔ CK, CK ↔ Detector A/B and Detector ↔ Image, each on points with easy predictions (e.g. detector centre → (0, 0, 0), X-ray source → (0, 0, 2000), detector (0, 0) mm → image (1000, 1000) px) | All 24 predictions matched |
+| 2. Marker transforms | The three markers transformed MD → CK → Detector A/B and plotted in 3D | MD and CK coordinates are identical, as expected for aligned frames; saved to `data/marker_transforms.json` and `data/markers_ck.png` |
+| 3. Forward projector | Three points with hand predictions, using magnification M = 2000 / (1000 − d) | All six projections matched; every hit lies on the detector plane (w ≈ 0) |
+| 4. Marker projector | Rough hand estimates assuming M ≈ 2 | Every marker landed on the predicted side of both detectors, within a few mm of the estimate |
+| 5. DRR | Homogeneous sphere (R = 50 mm) and the vertebra STL, on both detectors, with Beer–Lambert attenuation | Images match the predicted appearance; see `data/sphere_drr_*.png` and `data/vertebra_drr_*.png` |
+| 6. Marker localization | Automatic segmentation vs manual clicks vs true projected positions | Automatic: 0.04–0.15 mm (mean 0.09 mm). Manual: 0.40–1.21 mm (mean 0.84 mm) |
+| 7. Marker reconstruction | Exact detector positions back-projected to 3D | True positions recovered; error and REM about 10⁻¹³ mm |
+| 8. Marker correspondences | Two methods (minimum total REM, epipolar distance), with markers in normal order and with M1/M2 swapped in Detector B | Both methods found the correct pairing in both tests |
+| 9. Marker ambiguity | Two methods, on the original markers and on markers moved into the z = 0 plane (the plane containing both X-ray sources) | Original: one unique pairing. z = 0: all six pairings equally plausible, so both methods detect the ambiguity |
+| 10. Error analysis | MLE 0–10 mm, 360 × 360 error directions, all three markers | maxMLE = 7 mm (worst MRE 4.96 mm; 5.66 mm at 8 mm). REM–MRE correlation 0.31; no REM threshold separates safe from unsafe cases |
+
+## Limitations of the error analysis
+
+- **Integer MLE steps.** Only whole millimetres were tested, so the true limit lies between 7 and 8 mm. The worst-case MRE grew almost exactly linearly (about 0.71 mm per mm of MLE), which puts the actual limit near 7.06 mm; 7 mm is the safe, rounded-down answer.
+- **1° direction steps.** Directions between the tested angles were not checked. The error changes smoothly with direction, so the true worst case can only be marginally larger than the sampled one.
+- **Equal error in both images.** Each test shifted the marker by exactly the same MLE on both detectors. Real localization errors differ between the two images and are random, so these results are a worst-case bound rather than a prediction of typical errors.
+- **Ideal geometry.** The source and detector positions, the ±45° angles and the marker centres are assumed to be known exactly. Calibration errors, patient motion and image noise were not modelled, so in practice the reconstruction error would be larger than localization error alone predicts.
+- **Three markers near the isocentre.** All tested markers lie within about 50 mm of the isocentre. Markers further away are magnified differently, so the error scaling would change slightly.
+
+MLE is measured on the detector, where everything is magnified about 2×. The automatic localization in Part 6 was within 0.15 mm and manual clicking within 1.21 mm, both far below the 7 mm limit, so this set-up has a large safety margin. REM should be combined with other checks rather than used on its own as a safety alarm.
+
+## AI attribution
+
+Parts of this project were developed with help from Claude (Anthropic), an AI assistant. It was used to help draft and refactor code, design the forward and marker projector tests and their explanations, and write the Part 10 limitations discussion. All AI-assisted code and text were reviewed by the team, and the code was tested with the predictions and checks shown in each part of the notebook.
+
 ## Main final result
 
 The exhaustive marker localization error simulation found that the largest tested integer localization error that kept marker reconstruction error below the required 5 mm limit for every tested direction was:
