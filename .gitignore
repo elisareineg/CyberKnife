@@ -2,3 +2,9 @@
 __pycache__/
 .ipynb_checkpoints/
 data/*.npy
+
+# Keep the four DRR arrays that localize.py, the demo and the notebook load
+!data/sphere_drr_A.npy
+!data/sphere_drr_B.npy
+!data/vertebra_drr_A.npy
+!data/vertebra_drr_B.npy

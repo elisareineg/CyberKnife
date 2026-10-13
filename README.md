@@ -2,20 +2,25 @@
 
 This project implements a simplified CyberKnife imaging and marker-reconstruction pipeline. It covers coordinate-frame transformations, forward projection, digitally reconstructed radiographs, marker localization, 3-D reconstruction, marker correspondence, ambiguity detection, and reconstruction-error analysis.
 
----------->
----------->
----------->
-## (IMPORTANT PLEASE DO IT!) Recommended way to run the project (IMPORTANT PLEASE DO IT!)
+## How to run
 
-For the clearest walkthrough of the entire project, **run the demo flow** instead of executing each Python file individually.
+**For the clearest walkthrough of the whole project, run the demo flow rather than each Python file individually.**
 
-From the repository root, run:
+From the repository root:
 
-```powershell
-python .\demo_flow.py
-```
+1. Install the dependencies:
 
-The demo pauses between parts so you can inspect the terminal output and images before continuing.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the demo:
+
+   ```bash
+   python demo_flow.py
+   ```
+
+The commands work in Windows PowerShell and in macOS/Linux terminals. The demo pauses between parts so you can inspect the terminal output and images before continuing. The DRR images it needs are already included in `data/`, so it can be run straight away.
 
 ## Demo flow
 
@@ -40,7 +45,7 @@ Some computationally expensive results, especially the DRR generation and exhaus
 
 Install the required Python packages with:
 
-```powershell
+```bash
 pip install -r requirements.txt
 ```
 
@@ -76,6 +81,7 @@ repository/
 ├── README.md
 │
 ├── data/
+│   ├── LumbarVertebrae.-witrh-Markers.stl
 │   ├── marker_transforms.json
 │   ├── markers_ck.png
 │   ├── sphere_drr_A.npy
@@ -98,34 +104,37 @@ repository/
 │   ├── MLE_vs_MRE.png
 │   └── REM_vs_MRE.png
 │
-└── notebooks/
-    └── module_tests.ipynb
+├── notebooks/
+│   ├── module_tests.ipynb
+│   └── module_tests.py
+│
+└── tests/
+    └── test_util.py
 ```
 
 ## Individual modules
 
 The modules can also be run separately if needed.
 
-```powershell
-python .\transforms.py
-python .\marker_transforms.py
-python .\forward_projector.py
-python .\marker_projector.py
-python .\drr.py
-python .\localize.py
-python .\localize.py --manual
-python .\reconstruction.py
-python .\correspond.py
-python .\ambiguity.py
-python .\error_analysis.py
+```bash
+python transforms.py
+python marker_transforms.py
+python forward_projector.py
+python marker_projector.py
+python drr.py
+python localize.py
+python localize.py --manual
+python reconstruction.py
+python correspond.py
+python ambiguity.py
+python error_analysis.py
 ```
 
 However, for reviewing or demonstrating the complete project, the preferred command is:
 
-```powershell
-python .\demo_flow.py
+```bash
+python demo_flow.py
 ```
-
 ## Notebook
 
 The full assignment testing and discussion are contained in:
@@ -141,7 +150,7 @@ The notebook is saved with all of its outputs, so it can be read directly on Git
 ### If running the code fails
 
 - Install the dependencies first with `pip install -r requirements.txt`. `drr.py` needs `trimesh`.
-- The DRR arrays (`data/*_drr_*.npy`) are not stored in the repository (they are excluded by `.gitignore`). Run `python drr.py` once to create them before running `localize.py`, Part 6 of the demo, or Parts 5–6 of the notebook.
+- The DRR arrays (`data/sphere_drr_*.npy`, `data/vertebra_drr_*.npy`) are included in the repository. If they are missing, or after changing `drr.py`, run `python drr.py` to regenerate them.
 - Run `localize.py` with `--manual` (or through the demo). Running it without `--manual` overwrites the saved manual localization results.
 
 ## Results summary
@@ -185,4 +194,4 @@ maxMLE = 7 mm
 
 The residual error metric, REM, was useful for describing geometric disagreement between the two back-projection rays, but it was not a reliable standalone warning threshold for reconstruction accuracy.
 
-author: Serhat
+Authors: Serhat, Akshay, Elisa
