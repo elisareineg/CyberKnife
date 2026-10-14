@@ -1,13 +1,10 @@
 import json
-import os
+from pathlib import Path
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-from transforms import (
-    md_to_ck,
-    ck_to_detector
-)
+from transforms import md_to_ck, ck_to_detector
 
 
 # PART 2: MARKER TRANSFORMS
@@ -21,42 +18,32 @@ MARKERS_MD = {
 }
 
 
-def transform_markers(markers_md=MARKERS_MD):
+def transform_markers(markers_md=None):
     """
-    Transform all markers through the relevant coordinate frames.
+    Transform marker positions from MD into CK and both detector frames.
 
-    MD -> CK -> Detector A / Detector B
-
-    Note:
-    Detector coordinates here represent the actual 3-D marker
-    location expressed in each detector coordinate system.
-
-    They are NOT X-ray projected detector locations.
-    Projection is handled later by the Marker Projector.
+    Detector coordinates represent 3D positions in each detector's
+    local coordinate system, not projected image positions.
     """
+     
+    if markers_md is None:
+        markers_md = MARKERS_MD
 
     results = {}
 
     for name, marker_md in markers_md.items():
-
+        marker_md = np.asarray(marker_md, dtype=float)
         marker_ck = md_to_ck(marker_md)
 
-        marker_detector_A = ck_to_detector(
-            marker_ck,
-            "A"
-        )
-
-        marker_detector_B = ck_to_detector(
-            marker_ck,
-            "B"
-        )
-
         results[name] = {
-            "MD": marker_md,
+            "MD": marker_md.copy(),
             "CK": marker_ck,
-            "Detector_A_3D": marker_detector_A,
-            "Detector_B_3D": marker_detector_B
         }
+
+        for view in ("A", "B"):
+            results[name][f"Detector_{view}_3D"] = ck_to_detector(
+                marker_ck, view
+            )
 
     return results
 
@@ -70,33 +57,22 @@ MARKERS_CK = {
 
 
 def save_results(results, filename="data/marker_transforms.json"):
-    """
-    Save marker transformations for repeated later use.
-    """
+    """Save marker coordinates to a JSON file."""
 
-    os.makedirs(
-        os.path.dirname(filename),
-        exist_ok=True
-    )
+    output_path = Path(filename)
 
-    serializable = {}
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    for name, values in results.items():
+    serializable = {
+        name: {
+            frame: np.asarray(coordinates).tolist()
+            for frame, coordinates in values.items()
+        }
+        for name, values in results.items()
+    }
 
-        serializable[name] = {}
-
-        for frame, coordinates in values.items():
-
-            serializable[name][frame] = (
-                np.asarray(coordinates).tolist()
-            )
-
-    with open(filename, "w") as f:
-        json.dump(
-            serializable,
-            f,
-            indent=4
-        )
+    with output_path.open("w") as file:
+        json.dump(serializable, file, indent=4)
 
 
 def plot_markers_ck(
@@ -108,10 +84,8 @@ def plot_markers_ck(
     in the CyberKnife frame.
     """
 
-    os.makedirs(
-        os.path.dirname(filename),
-        exist_ok=True
-    )
+    output_path = Path(filename)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     fig = plt.figure()
 
@@ -140,14 +114,15 @@ def plot_markers_ck(
     ax.set_title(
         "CyberKnife Marker Positions"
     )
-
-    plt.savefig(
-        filename,
+    
+    fig.savefig(
+        output_path,
         dpi=200,
         bbox_inches="tight"
     )
 
     plt.show()
+    plt.close(fig)
 
 
 if __name__ == "__main__":
@@ -197,4 +172,4 @@ if __name__ == "__main__":
     )
 
     
-# author: Serhat
+# authors: Serhat, Akshay
