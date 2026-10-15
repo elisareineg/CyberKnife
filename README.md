@@ -19,6 +19,14 @@ From the repository root:
    ```bash
    python demo_flow.py
    ```
+## Automated tests
+
+Run the automated test suite from the repository root:
+
+    python -m pytest -v
+
+The tests cover coordinate-frame transformations, marker transformations,
+detector geometry, round-trip consistency, JSON export, and visualization.
 
 The commands work in Windows PowerShell and in macOS/Linux terminals. The demo pauses between parts so you can inspect the terminal output and images before continuing. The DRR images it needs are already included in `data/`, so it can be run straight away.
 
@@ -110,6 +118,8 @@ repository/
 │
 └── tests/
     └── test_util.py
+    └── test_transforms.py
+    └── test_marker_transforms.py
 ```
 
 ## Individual modules
