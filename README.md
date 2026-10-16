@@ -192,7 +192,7 @@ MLE is measured on the detector, where everything is magnified about 2×. The au
 
 ## AI attribution
 
-Parts of this project were developed with help from Claude (Anthropic), an AI assistant. It was used to help draft and refactor code, design the forward and marker projector tests and their explanations. All AI-assisted code and text were reviewed by the team, and the code was tested with the predictions and checks shown in each part of the notebook.
+Parts of this project were developed with help from Claude (Anthropic) and ChatGPT (OpenAI), AI assistants. They were used to help draft and refactor code, design the forward and marker projector tests and their explanations. All AI-assisted code and text were reviewed by the team, and the code was tested with the predictions and checks shown in each part of the notebook.
 
 ## Main final result
 
